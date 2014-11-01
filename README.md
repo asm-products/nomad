@@ -1,4 +1,4 @@
-# Nomad
+# Nomad [![Code Climate](https://codeclimate.com/github/asm-products/nomad/badges/gpa.svg)](https://codeclimate.com/github/asm-products/nomad) [![Test Coverage](https://codeclimate.com/github/asm-products/nomad/badges/coverage.svg)](https://codeclimate.com/github/asm-products/nomad)
 
 ## Find the best places to work remotely
 
