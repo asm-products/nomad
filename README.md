@@ -37,7 +37,7 @@ If everything goes right you will end up with a Docker virtual machine running a
 
 Open a new terminal tab and type ```boot2docker ip```. In my case I got ```192.168.59.103```, so if I enter ```http://192.168.59.103:3000/``` in the browser it'll load the Nomad with errors.
 
-The next step is to create the database, in the same terminal run ```fig run web rake db:create``` followed by ```fig run web rake db:migrate```.
+The next step is to create the database. You will need to copy the sample database.yml file; in the project root directory, run ```cp config/database.sample.yml config/database.yml```. In the same terminal run ```fig run web rake db:create``` followed by ```fig run web rake db:migrate```.
 
 Now reload your browser and you should be presented with the default Rails index page, it means that you have everything up and running.
 
