@@ -15,3 +15,7 @@
 /log/*.log
 /tmp
 config/database.yml
+
+# Other files
+.ruby-version
+.ruby-gemset
