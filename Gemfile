@@ -42,3 +42,4 @@ gem 'rspec-rails', '~> 3.0.0', group: [:development, :test]
 gem 'slim-rails'
 gem 'activerecord-postgres-earthdistance'
 gem 'shoulda-matchers', group: :test
+gem 'machinist', '>= 2.0.0.beta2'
