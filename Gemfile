@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 
 gem 'rspec-rails', '~> 3.0.0', group: [:development, :test]
 gem 'slim-rails'
+gem 'activerecord-postgres-earthdistance'
+gem 'shoulda-matchers', group: :test
