@@ -1,4 +1,7 @@
-# Nomad [![Code Climate](https://codeclimate.com/github/asm-products/nomad/badges/gpa.svg)](https://codeclimate.com/github/asm-products/nomad) [![Test Coverage](https://codeclimate.com/github/asm-products/nomad/badges/coverage.svg)](https://codeclimate.com/github/asm-products/nomad)
+# Nomad
+[![CodeClimate](https://codeclimate.com/github/asm-products/nomad/badges/gpa.svg)](https://codeclimate.com/github/asm-products/nomad)
+[![TestCoverage](https://codeclimate.com/github/asm-products/nomad/badges/coverage.svg)](https://codeclimate.com/github/asm-products/nomad)
+[![Build Status](https://travis-ci.org/asm-products/nomad.svg?branch=master)](https://travis-ci.org/asm-products/nomad)
 
 This is a product being built by the Assembly community. You can help push this idea forward by visiting [https://assembly.com/nomad](https://assembly.com/nomad).
 
