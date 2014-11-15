@@ -3,7 +3,13 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :places, only: :none do
         collection do
-          get 'search/:radius/:lat/:lng' => 'places#search'
+          get(
+            'search/:radius/:lat/:lng' => 'places#search',
+            constraints: {
+              lat: /\-?\d+\.\d+/,
+              lng: /\-?\d+\.\d+/
+            }
+          )
         end
       end
     end
