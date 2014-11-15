@@ -44,6 +44,24 @@ The next step is to create the database. You will need to copy the sample databa
 
 Now reload your browser and you should be presented with the default Rails index page, it means that you have everything up and running.
 
+## API Documentation
+
+### Methods
+
+#### Search
+
+Returns all places in the given area ordered by distance.
+
+```
+/api/v1/places/search/:radius/:lat/:lng.json
+```
+
+* ```radius```: integer representing how much meters to cover
+* ```lat```: float number for latitude
+* ```lng```: float number for longitude
+
+Example: https://asm-nomad-staging.herokuapp.com/api/v1/places/search/1000/-23.0045582/-43.324637.json
+
 ## How Assembly Works
 
 Assembly products are like open-source and made with contributions from the community. Assembly handles the boring stuff like hosting, support, financing, legal, etc. Once the product launches we collect the revenue and split the profits amongst the contributors.
