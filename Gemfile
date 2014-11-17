@@ -18,3 +18,7 @@ gem 'spring', group: :development
 gem 'therubyracer', platforms: :ruby
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'coveralls', require: false
+
+
+

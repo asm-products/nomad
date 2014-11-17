@@ -19,3 +19,4 @@ config/database.yml
 # Other files
 .ruby-version
 .ruby-gemset
+/coverage
