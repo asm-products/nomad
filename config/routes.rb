@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :places, only: :none do
+      resources :places, only: :show do
         collection do
           get(
             'search/:radius/:lat/:lng' => 'places#search',
