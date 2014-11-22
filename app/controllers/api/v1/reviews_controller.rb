@@ -3,7 +3,7 @@ class Api::V1::ReviewsController < ApplicationController
 
   def create
     @review = Review
-      .create_with_placeid(params[:place_id])
+      .create(params)
 
     respond_with @review
   end

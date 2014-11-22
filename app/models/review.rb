@@ -3,13 +3,8 @@ class Review < ActiveRecord::Base
 
   belongs_to :place
 
-  def self.new_with_placeid(placeid, title, body, rating)
-    new(
-      place: Place.find_by_placeid(placeid),
-      title: title,
-      body: body,
-      rating: rating
-    )
+  def self.create_with_placeid(placeid, options)
+    Place.find_by_placeid(placeid)
   end
 
 end

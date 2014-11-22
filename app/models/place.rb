@@ -8,4 +8,8 @@ class Place < ActiveRecord::Base
   def self.find_by_placeid(placeid)
     find_by(placeid: placeid)
   end
+
+  def self.find_or_create(options={})
+    find_by_placeid(options[:placeid]) || create(options)
+  end
 end
