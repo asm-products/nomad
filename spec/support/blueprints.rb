@@ -8,4 +8,8 @@ Place.blueprint do
 end
 
 Review.blueprint do
+  place  { Place.make }
+  title  { "Great place!" }
+  body   { "Blah Blah Blah" }
+  rating { 5 }
 end
