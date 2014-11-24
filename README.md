@@ -48,7 +48,7 @@ Now reload your browser and you should be presented with the default Rails index
 
 ### Methods
 
-#### Search
+#### places#search
 
 Returns all places in the given area ordered by distance.
 
@@ -61,6 +61,18 @@ Returns all places in the given area ordered by distance.
 * ```lng```: float number for longitude
 
 Example: https://asm-nomad-staging.herokuapp.com/api/v1/places/search/1000/-23.0045582/-43.324637.json
+
+#### places#show
+
+Returns the place data for the given place id.
+
+```
+/api/v1/places/:id.json
+```
+
+* ```id```: integer for the respective place id
+
+Example: https://asm-nomad-staging.herokuapp.com/api/v1/places/1.json
 
 ## How Assembly Works
 

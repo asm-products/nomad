@@ -1,14 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::PlacesController, :type => :controller do
+  before do
+    @starbucks_ipanema = Place.make! lat: -22.9857647, lng: -43.2073231
+    @starbucks_downtown = Place.make! lat: -23.005616, lng: -43.3202978
+  end
+
   describe "GET search" do
     let(:inside_params) { { radius: 15000, lat: -23.0058447, lng: -43.3214268 } }
     let(:out_of_range_params) { { radius: 100, lat: -23.0058447, lng: -43.3214268 } }
-
-    before do
-      @starbucks_ipanema = Place.make! lat: -22.9857647, lng: -43.2073231
-      @starbucks_downtown = Place.make! lat: -23.005616, lng: -43.3202978
-    end
 
     context "when there is no place for the given parameters" do
       it "should return an empty array" do
@@ -24,6 +24,14 @@ RSpec.describe Api::V1::PlacesController, :type => :controller do
         places = JSON.parse(response.body)
         expect(places.map{|p| p["id"]}).to eq([@starbucks_downtown.id, @starbucks_ipanema.id])
       end
+    end
+  end
+
+  describe "GET show" do
+    it "should return the place" do
+      get :show, id: @starbucks_ipanema.id, format: :json
+      place_json = JSON.parse(response.body)
+      expect(place_json["name"]).to be_eql(@starbucks_ipanema.name)
     end
   end
 end

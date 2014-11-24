@@ -8,4 +8,9 @@ class Api::V1::PlacesController < ApplicationController
 
     respond_with @places
   end
+
+  def show
+    @place = Place.find(params[:id])
+    respond_with @place
+  end
 end
