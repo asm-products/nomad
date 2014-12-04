@@ -46,14 +46,18 @@ Now reload your browser and you should be presented with the default Rails index
 
 ## API Documentation
 
+### Authentication
+
+Most of this API is publicly accessible, but some methods require a [HTTP token](http://api.rubyonrails.org/classes/ActionController/HttpAuthentication/Token.html) for authentication. In order to get one of those tokens, you have to create an user, every user have an automatically generated attribute called ```api_token``` which grants access to authenticated API methods.
+
 ### Methods
 
-#### Search
+#### places/search
 
 Returns all places in the given area ordered by distance.
 
 ```
-/api/v1/places/search/:radius/:lat/:lng.json
+GET /api/v1/places/search/:radius/:lat/:lng.json
 ```
 
 * ```radius```: integer representing how much meters to cover
@@ -61,6 +65,29 @@ Returns all places in the given area ordered by distance.
 * ```lng```: float number for longitude
 
 Example: https://asm-nomad-staging.herokuapp.com/api/v1/places/search/1000/-23.0045582/-43.324637.json
+
+#### places/show
+
+Returns the place data for the given place id.
+
+```
+GET /api/v1/places/:id.json
+```
+
+* ```id```: integer for the respective place id
+
+Example: https://asm-nomad-staging.herokuapp.com/api/v1/places/1.json
+
+#### reviews/create (requires authentication)
+
+Create a new review.
+
+```
+POST /api/v1/reviews.json
+```
+
+* ```review```: hash with the review params
+  * ```place_id```: integer for the respective place id
 
 ## How Assembly Works
 

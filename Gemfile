@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'machinist', '>= 2.0.0.beta2'
 gem 'pg'
 gem 'rails', '4.1.6'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 gem 'rspec-rails', '~> 3.0.0', group: [:development, :test]
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
