@@ -89,6 +89,19 @@ POST /api/v1/reviews.json
 * ```review```: hash with the review params
   * ```place_id```: integer for the respective place id
 
+#### users/create
+
+Create a new user.
+
+```
+POST /api/v1/users.json
+```
+
+* ```user```: hash with the user params
+  * ```first_name```: required string for the user first name
+  * ```last_name```: required string for the user last name
+  * ```email```: required string for the user email
+
 ## How Assembly Works
 
 Assembly products are like open-source and made with contributions from the community. Assembly handles the boring stuff like hosting, support, financing, legal, etc. Once the product launches we collect the revenue and split the profits amongst the contributors.
